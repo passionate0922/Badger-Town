@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  padding: 0;
+  margin: 0;
+  background-color: #FF0005;
+  font-family: Adobe Song Std L;
+  text-shadow: 1px 0.3px black;
+}
+
+ul li {
+  display: block;
+  position: relative;
+  float: left;
+  
+  /*navbar buttons(Home, Major,..) 색*/
+  background-color: #ff0005;  
+  text-align: center;
+  text-decoration: none;
+}
+
+li ul { 
+  display: none;
+  position: absolute;
+  background-color: #b30000;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1; 
+}
+
+ul li a {
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Adobe Song Std L;
+  text-shadow: 1px 0.3px black;
+  white-space: nowrap;
+  color: white;	/*text-color of navbar*/
+  font-size: 18px;
+}
+
+
+li:hover > ul {
+  display: block;
+  position: absolute;
+}
+
+
+li:hover li { 
+  float: none; 	/*hoverdown menu를 일렬로*/
+}
+
+li:hover a { 
+  background-color: #b30000;  
+}
+
+li:hover li a {
+  background-color: #f9f9f9  /*hoverdown menu의 색*/
+}
+
+li:hover li a:hover { 
+/*hoverdown menu가 hover될 때의 색*/
+  background: #ddd; 
+}
+
+
+/*이거 내가 새로 넣은 것*/
+li:hover > ul a { 
+  color: red;	/*hoverdown menu text color*/
+  text-shadow: 0px 0px;
+}
+
+.menucontainer li ul li { 
+  border-top: 0; 
+}
+
+ul ul ul {
+  left: 100%;
+  top: 0;
+}
+
+/*이게 있으면 navbar 전체 다 빨간색, 없으면 버튼 있는 부분만 빨간색 - 추후 수정가능성*/
+ul:before,
+ul:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+/*이것도 위에 css랑 같은 작용...*/
+ul:after { clear: both; }
+</style>
+
+</head>
+
+<body>
+
+<h2>BADGER TOWN DICTIONARY</h2>
+
+<ul class="menucontainer">
+  
+  <li><a href="Main.html">Home</a></li>
+  
+  
+  <li><a href="#">Talk about Major</a>
+    <ul>
+      <li><a href="major_AtoF.html">A - F</a></li>
+      <li><a href="major_HtoL">G - L</a></li>
+      <li><a href="major_MtoR">M - R</a></li>
+      <li><a href="major_StoZ">S - Z</a></li>
+      <li><a href="fullmajor.html">Full-List of Major</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Talk about Course</a>
+    <ul>
+      <li><a href="courseby_breath.html">Course by Breath</a>
+        <ul>
+          <li><a href="#">Biological Science</a></li>
+          <li><a href="#">Humanities</a></li>
+          <li><a href="#">Interdivisional</a></li>
+          <li><a href="#">Literature</a></li>
+          <li><a href="#">Natural Science</a></li>
+          <li><a href="#">Physical Science</a></li>
+          <li><a href="#">Social Science</a></li>
+        </ul>
+      </li>
+      <li><a href="courseby_number.html">Course by Number</a>
+        <ul>
+          <li><a href="#">100 - 199</a></li>
+          <li><a href="#">200 - 299</a></li>
+          <li><a href="#">300 - 399</a></li>
+          <li><a href="#">400 - 499</a></li>
+          <li><a href="#">500 - 599</a></li>
+          <li><a href="#">600 - 699</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li><a href="#">How was your Professor?</a></li>
+
+  <li><a href="#">Off-campus Activity</a>
+    <ul>
+      <li><a href="#">Volunteer</a></li>
+      <li><a href="#">Something to Eat</a></li>
+    </ul>
+  </li>
+  <li><a href="#">UW-Madison "Craiglist"</a>
+    <ul>
+      <li><a href="#">Sublet</a></li>
+      <li><a href="#">Things</a></li>
+    </ul>
+  </li>
+</ul>
+    
+
+
+</body>
+</html>

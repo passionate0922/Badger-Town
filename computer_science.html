@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+.menucontainer {
+    overflow: hidden;
+    background-color: #FF0005;
+    font-family: Arial;
+}
+
+.menucontainer a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.menucontainer a:hover, .dropdown:hover .dropbtn {
+    background-color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: red;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>BADGER TOWN DICTIONARY</h2>
+<h3>This is CS'er page!</h3>
+
+<div class="menucontainer">
+  <a href="menustyle.html">Home</a>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Major</button>
+    <div class="dropdown-content">
+      <a href="computer_science.html">Computer Science</a>
+      <a href="anthropology.html">Anthropology</a>
+      <a href="mathematics.html">Mathematics</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Course</button>
+    <div class="dropdown-content">
+      <a href="#Computer Science">Computer Science</a>
+      <a href="#Anthropology">Anthropology</a>
+      <a href="#Mathematics">Mathematics</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Professor</button>
+    <div class="dropdown-content">
+      <a href="#Computer Science">Computer Science</a>
+      <a href="#Anthropology">Anthropology</a>
+      <a href="#Mathematics">Mathematics</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Off-campus Activity</button>
+    <div class="dropdown-content">
+      <a href="#Computer Science">Computer Science</a>
+      <a href="#Anthropology">Anthropology</a>
+      <a href="#Mathematics">Mathematics</a>
+    </div>
+  </div>
+ 
+</div>
+
+
+</body>
+</html>
