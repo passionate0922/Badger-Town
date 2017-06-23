@@ -1,4 +1,4 @@
-﻿//Still working on modification
+//Still working on modification
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +17,7 @@
   text-align: center;
   display: block;
   width: relative;
+  clear: both;
 }
 
 .navbar li a{
@@ -28,34 +29,49 @@
   padding: 14px 16px;
 }
 
+
 .navbar li:hover{
   background-color: #b30000;
   color: white;
 }
 
-.navbar li ul{
+.navbar li .submenu{
   display: none;
-  position: absolute;
-  z-index: 1;
   width: relative;
-  right: inherit;
+  list-style: none;
+
+}
+
+.navbar li:hover ul{
+  position: relative;
+  display: block;
+  top: 0;
+  left: 100%;
+  width: relative;
+  white-space: nowrap;
+  z-index: 1;
+  margin-left: -30px;
+  margin-top: -27px;
+}
+
+navbar li:hover ul li{
+  display: inline-block;
+
 }
 
 .navbar li ul a{
   color: black;
+  list-style: none;
+}
+
+.navbar li:hover ul li {
+  list-style: none;
 }
 
 .navbar li ul li a:hover{
   background-color: #ddd;
 }
 
-.navbar li:hover ul{
-  position: absolute;
-}
-
-li:hover li{
-  float: none;
-}
 
 li:hover li a {
   background: #f9f9f9;
@@ -65,10 +81,7 @@ li: hover li a:hover {
   background: #ddd;
 }
 
-li:hover > ul{
-  position: absolute;
-  display: block;
-}
+
 
 
 
@@ -116,7 +129,7 @@ p.outset a:link {
   <li><a href="Main.html">Home</a></li>
 
   <li><a href="">Talk about Major</a>
-    <ul>
+    <ul class="submenu">
       <li><a href="major_AtoF.html">A - F</a></li>
       <li><a href="major_HtoL.html">G - L</a></li>
       <li><a href="major_MtoR.html">M - R</a></li>
@@ -126,7 +139,7 @@ p.outset a:link {
   </li>
 
   <li><a href="">Talk about Course</a>
-    <ul>
+    <ul class="submenu">
       <li><a href="courseby_breath.html">Course by Breath</a></li>
       <li><a href="courseby_number.html">Course by Number</a></li>
     </ul>
@@ -136,14 +149,14 @@ p.outset a:link {
   </li>
 
   <li><a href="#">Off-campus Activity</a>
-    <ul>
+    <ul class="submenu">
       <li><a href="#">Volunteer</a></li>
       <li><a href="#">Something to Eat</a></li>
     </ul>
   </li>
 
   <li><a href="#">Badgers' "Craiglist"</a>
-    <ul>
+    <ul class="submenu">
       <li><a href="#">Sublet</a></li>
       <li><a href="#">Things</a></li>
     </ul>
