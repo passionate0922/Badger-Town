@@ -5,87 +5,114 @@
 <style>
 /*Navbar*/
 .navbar {
-  list-style: none;
-  width: 200px;
-  margin: 0;
-  padding: 0;
-  background-color: indianred;
+  height:auto;
+  list-style:none;
+  width: 100%;
+  margin: 20px 0 0 0;
   position: fixed;
 }
 
 .navbar li {
+  margin: 0;
+  padding: 14px 14px;
+  background-color: indianred;
+  border: none;
   text-align: center;
   display: block;
-  width: relative;
-  clear: both;
+  float: left;
+  clear:both;
+  width: 200px;
+  height: 20px;		/***If height is not set, navbar is hovered down as long as its submenu**/
 }
 
-.navbar li a{
-  color: white;
-  white-space: nowrap;
-  font-family: Berlin Sans FB;
-  text-decoration: none;
-  display: block;
-  padding: 14px 16px;
+.navbar li a {
+    font-family: Berlin Sans FB;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar li:hover {
+    background-color: #b30000;
+    color: white;
+}
+
+navbar ul li ul {
+    display:none;
+    list-style-type:none;
+    width:5px;
+    padding:0px;
+    margin-top:3px;
+  margin-left: 100px;
+}
+navbar ul li:hover ul {
+    display:block;
+}
+navbar ul li:hover ul li {
+    background-color:#555555;
+    width:125px;
+    height:30px;
+    display:block;
+}
+navbar ul li ul li:hover {
+    background-color:#333333;
+}
+navbar ul li ul li a {
+    color:#FFF;
+    text-decoration:underline;
+}
+navbar ul li ul li a:hover {
+    text-decoration:none;
+}
+.navbar li ul {
+    display: none;
+    margin-top: 10px;
+    margin-left: 50px;
+    padding: 0;
+}
+.navbar li:hover ul {
+    display: block;
+}
+.navbar li:hover .submenu
+{
+    position: relative;   
+    margin-top: -27.5px;
+}
+
+.submenu {
+  height: auto;
 }
 
 
-.navbar li:hover{
-  background-color: #b30000;
-  color: white;
-}
-
-.navbar li .submenu{
-  display: none;
-  width: relative;
-  list-style: none;
-
-}
-
-.navbar li:hover ul{
-  position: relative;
+.submenu li{
+  position: relative;  
   display: block;
   top: 0;
   left: 100%;
-  width: relative;
+  width: 100%;
+  min-width: 180px;
   white-space: nowrap;
-  z-index: 1;
-  margin-left: -30px;
-  margin-top: -27px;
+  z-index:1;
 }
 
-navbar li:hover ul li{
-  display: inline-block;
-
+.submenu li{
+  display:inline-block;
+  padding: 14px 10px;
+  background-color: #f9f9f9;
+  margin-left: 14px;
+  height: 27px;
+  margin-top: -7px;
 }
 
-.navbar li ul a{
+.submenu li a{
   color: black;
-  list-style: none;
 }
 
-.navbar li:hover ul li {
-  list-style: none;
-}
-
-.navbar li ul li a:hover{
+.submenu li:hover {
   background-color: #ddd;
 }
 
-
-li:hover li a {
-  background: #f9f9f9;
-}
-
-li: hover li a:hover {
-  background: #ddd;
-}
-
-
-
-
-
-/*Page content - Need Bootstrap in further process*/
+/*Page content - Need Bootstrap in further process(scrollspy)*/
 .besidesnav {
   margin-left:300px;
   
