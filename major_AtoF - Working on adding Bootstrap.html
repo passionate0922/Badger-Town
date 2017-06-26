@@ -1,0 +1,493 @@
+﻿//Still working on modification
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/*hoverable-side*/
+.hoverable-side {
+  height:auto;
+  list-style:none;
+  width: 100%;
+  margin: 20px 0 0 0;
+  position: fixed;
+}
+
+.hoverable-side li {
+  margin: 0;
+  padding: 14px 14px;
+  background-color: indianred;
+  border: none;
+  text-align: center;
+  display: block;
+  float: left;
+  clear:both;
+  width: 200px;
+  height: 20px;		/***If height is not set, hoverable-side is hovered down as long as its submenu**/
+}
+
+.hoverable-side li a {
+  font-family: Berlin Sans FB;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+
+.hoverable-side li:hover {
+  background-color: #b30000;
+  color: white;
+}
+
+.hoverable-side li ul {
+  display: none;
+  margin-top: 10px;
+  margin-left: 50px;
+  padding: 0;
+}
+
+.hoverable-side li:hover ul {
+    display: block;
+}
+
+.hoverable-side li:hover .submenu{
+  position: relative;   
+  margin-top: -27.5px;
+}
+
+.submenu {
+  height: auto;
+}
+
+.submenu li{
+  position: relative;  
+  display: block;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  white-space: nowrap;
+  z-index:1;
+}
+
+.submenu li{
+  display:inline-block;
+  padding: 14px 14px;
+  width: 150px;
+  background-color: #f9f9f9;
+  margin-left: 14px;
+  height: 27px;
+  margin-top: -7px;
+}
+
+.submenu li a{
+  color: black;
+}
+
+.submenu li:hover {
+  background-color: #ddd;
+}
+
+
+
+/*****Page content - Need Bootstrap in further process(scrollspy)*****/
+.container {
+  margin-left:300px;
+}
+
+.index {
+  display: inline;
+  font-family: Charlemagne Std;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.index a:link {
+  text-decoration: none;
+}
+
+p.outset {
+  font-size: 20px;
+  font-family: Charlemagne Std;
+  border-style: outset;
+  display: table;
+  padding: 0.3em;
+}
+
+p.outset a:link {
+  text-decoration: none;
+}
+
+.initial {
+  font-family: Meiryo;
+}
+
+.initial a {
+  color: black;
+  text-decoration: none;
+}
+
+.initial a:link:hover {
+  text-decoration: underline;
+}
+
+.show {display:block;}
+
+
+
+  #A-F {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
+  #G-L {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
+  #M-R {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
+  #S-Z {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
+  
+
+
+</style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<ul class="hoverable-side">
+  <li><a href="Main.html">Home</a></li>
+
+  <li><a href="">Talk about Major</a>
+    <ul class="submenu">
+      <li><a href="major_AtoF.html">A - F</a></li>
+      <li><a href="major_HtoL.html">G - L</a></li>
+      <li><a href="major_MtoR.html">M - R</a></li>
+      <li><a href="major_StoZ.html">S - Z</a></li>
+      <li><a href="fullmajor.html">Full-List of Major</a></li>
+    </ul>
+  </li>
+
+  <li><a href="">Talk about Course</a>
+    <ul class="submenu">
+      <li><a href="courseby_breath.html">Course by Breath</a></li>
+      <li><a href="courseby_number.html">Course by Number</a></li>
+    </ul>
+  </li> 
+ 
+  <li><a href="#">How was your Professor?</a>
+  </li>
+
+  <li><a href="#">Off-campus Activity</a>
+    <ul class="submenu">
+      <li><a href="#">Volunteer</a></li>
+      <li><a href="#">Something to Eat</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#">Badgers' "Craiglist"</a>
+    <ul class="submenu">
+      <li><a href="#">Sublet</a></li>
+      <li><a href="#">Things</a></li>
+    </ul>
+  </li>
+    
+  </ul>
+</div>
+
+
+
+/**Scrollspy***/
+<nav class="navbar navbar-inverse navbar-fixed-top"> 
+  <div class="container">				/*****Things to look for in future***/
+    <div class="index">
+      <button type="button" class="navbar-toggle' data-toggle="collapse" data-target="#majorscrollspy">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="">Major List</a>
+    </div>
+
+    <div>
+      <div class = "collapse navbar-colapse" id="majorlist">
+         
+           <li class="dropdn"><a class="dropdon-toggle" data-toggle="dropdn" href="">A - Z<span class="caret"></span></a>
+             <ul class="index">
+               <li><a href="#A-F">A - F</a></li>
+               <li><a href="#G-L">G - L</a></li>
+               <li><a href="#M-R">M - R</a></li>
+               <li><a href="#S-Z">S - Z</a></li>
+             </ul>	/***ul for index***/
+           </li>
+         </ul>
+       </div>
+    </div>
+  </div>
+</nav>  
+
+
+/**major detail that will be shown by scrollspy***/
+<div id="A-F" class="container">
+  <h1>A - F</h1>
+  
+  <ul class="list">
+
+  <p class="outset"><a href="#A">A</a></p>
+  <li class="initial"><a href="#">ACCOUNTING</a></li>
+  <li class="initial"><a href="#">ACTUARIAL SCIENCE</a></li>
+  <li class="initial"><a href="#">AFRICAN LANGUAGES AND LITERATURE</a></li>
+  <li class="initial"><a href="#">AFRO-AMERICAN STUDIES</a></li>
+  <li class="initial"><a href="#">AGRICULTURAL & APPLIED ECONOMICS</a></li>
+  <li class="initial"><a href="#">AGRICULTURAL BUSINESS MANAGEMENT</a></li>
+  <li class="initial"><a href="#">AGRONOMY</a></li>
+  <li class="initial"><a href="#">ANIMAL SCIENCES</a></li>
+  <li class="initial"><a href="#">ANTHROPOLOGY</a></li>
+  <li class="initial"><a href="#">APPLIED MATHEMATICS, ENGINEERING, AND PHYSICS</a></li>
+  <li class="initial"><a href="#">ART Degree Requirements</a></li>
+  <li class="initial"><a href="#">ART EDUCATION Degree Requirements</a></li>
+  <li class="initial"><a href="#">ART HISTORY</a></li>
+  <li class="initial"><a href="#">ASIAN STUDIES: EAST ASIAN</a></li>
+  <li class="initial"><a href="#">ASIAN STUDIES: SOUTHEAST ASIAN</a></li>
+  <li class="initial"><a href="#">ASTRONOMY - PHYSICS</a></li>
+  <li class="initial"><a href="#">ATHLETIC TRAINING Degree Requirements</a></li>
+  <li class="initial"><a href="#">ATMOSPHERIC AND OCEANIC SCIENCES</a></li>
+  
+  <p class="outset"><a href="#B">B</a></p>
+  <li class="initial"><a href="#">BIOCHEMISTRY - CALS</a></li>
+  <li class="initial"><a href="#">BIOCHEMISTRY</a></li>
+  <li class="initial"><a href="#">BIOLOGICAL SYSTEMS ENGINEERING</a></li>
+  <li class="initial"><a href="#">BIOLOGY - CALS</a></li>
+  <li class="initial"><a href="#">BIOLOGY - LS</a></li>
+  <li class="initial"><a href="#">BIOLOGY EDUCATION</a></li>
+  <li class="initial"><a href="#">BIOMEDICAL ENGINEERING</a></li>
+  <li class="initial"><a href="#">BOTANY</a></li>
+  
+  
+  
+  <p class="outset"><a href="#C">C</a></p>
+  <li class="initial"><a href="#">CALS INDIVIDUAL MAJOR</a></li>  
+  <li class="initial"><a href="#">CARTOGRAPHY AND GEOGRAPHIC INFORMATION SYSTEMS</a></li>
+  <li class="initial"><a href="#">CHEMICAL ENGINEERING</a></li> 
+  <li class="initial"><a href="#">CHEMISTRY</a></li>  
+  <li class="initial"><a href="#">CHEMISTRY EDUCATION</a></li>
+  <li class="initial"><a href="#">CHINESE</a></li>  
+  <li class="initial"><a href="#">CHINESE LANGUAGE</a></li>
+  <li class="initial"><a href="#">CIVIL ENGINEERING</a></li>  
+  <li class="initial"><a href="#">CLASSICAL HUMANITIES</a></li>
+  <li class="initial"><a href="#">CLASSICS</a></li>
+  <li class="initial"><a href="#">COMMUNICATION ARTS</a></li>
+  <li class="initial"><a href="#">COMMUNICATION SCIENCES AND DISORDERS</a></li>
+  <li class="initial"><a href="#">COMMUNICATION SCIENCES AND DISORDERS EDUCATION</a></li>
+  <li class="initial"><a href="#">COMMUNITY AND ENVIRONMENTAL SOCIOLOGY</a></li>
+  <li class="initial"><a href="#">COMMUNITY & NONPROFIT LEADERSHIP</a></li>
+  <li class="initial"><a href="#">COMPARATIVE LITERATURE</a></li>
+  <li class="initial"><a href="#">COMPUTER ENGINEERING</a></li>
+  <li class="initial"><a href="#">COMPUTER SCIENCES</a></li>
+  <li class="initial"><a href="#">CONSERVATION BIOLOGY</a></li>
+  
+
+  
+  <p class="outset"><a href="#D">D</a></p>
+  <li class="initial"><a href="#">DAIRY SCIENCE</a></li>
+  <li class="initial"><a href="#">DANCE Degree Requirements</a></li>
+  <li class="initial"><a href="#">DIETICS</a></li>
+
+  
+
+
+  
+  <p class="outset"><a href="#E">E</a></p>
+  <li class="initial"><a href="#">ECONOMICS</a></li>
+  <li class="initial"><a href="#">ECONOMICS EDUCATION</a></li>
+  <li class="initial"><a href="#">EDUCATION INDIVIDUAL MAJOR</a></li>
+  <li class="initial"><a href="#">ELECTRICAL ENGINEERING</a></li>
+  <li class="initial"><a href="#">ELEMENTARY EDUCATION Degree Requirements</a></li>
+  <li class="initial"><a href="#">ENGINEERING MECHANICS</a></li>
+  <li class="initial"><a href="#">ENGINEERING PHYSICS</a></li>
+  <li class="initial"><a href="#">ENGLISH</a></li>
+  <li class="initial"><a href="#">ENGLISH EDUCATION</a></li>
+  <li class="initial"><a href="#">ENTOMOLOGY</a></li>
+  <li class="initial"><a href="#">ENVIRONMENTAL SCIENCES</a></li>
+  <li class="initial"><a href="#">ENVIRONMENTAL STUDIES</a></li>
+  
+
+
+  
+  <p class="outset"><a href="#F">F</a></p>
+  <li class="initial"><a href="#">FINANCE, INVESTMENT AND BANKING</a></li>
+  <li class="initial"><a href="#">FOOD SCIENCE</a></li>
+  <li class="initial"><a href="#">FOREST SCIENCE</a></li>
+  <li class="initial"><a href="#">FRENCH</a></li>
+  <li class="initial"><a href="#">FRENCH EDUCATION</a></li>
+  
+  </ul>   /**li for A-F**/
+</div>
+
+<div id="G-L" class="container">
+  <h1>G - L</h1>
+
+  <ul class="list">
+
+  <p class="outset"><a href="#F">G</a></p>
+  <li class="initial"><a href="#">GENDER AND WOMEN'S STUDIES</a></li>
+  <li class="initial"><a href="#">GENETICS</a></li>
+  <li class="initial"><a href="#">GEOGRAPHY</a></li>
+  <li class="initial"><a href="#">GEOLOGICAL ENGINEERING</a></li>
+  <li class="initial"><a href="#">GEOLOGY AND GEOPHYSICS</a></li>
+  <li class="initial"><a href="#">GERMAN</a></li>
+  <li class="initial"><a href="#">GLOBAL CULTURES</a></li>
+  <li class="initial"><a href="#">GLOBAL HEALTH</a></li>
+  
+
+
+
+  
+  <p class="outset"><a href="#F">H</a></p>
+  <li class="initial"><a href="#">HEALTH CARE MANAGEMENT, SPECIALIZATION</a></li>
+  <li class="initial"><a href="#">HEALTH AND THE HUMANITIES</a></li>
+  <li class="initial"><a href="#">HISTORY AND HISTORY OF SCIENCE, MEDICINE, AND TECHNOLOGY</a></li>
+  <li class="initial"><a href="#">HISTORY</a></li>
+  <li class="initial"><a href="#">HORTICULTURE</a></li>
+  <li class="initial"><a href="#">HUMAN DEVELOPMENT AND FAMILY STUDIES</a></li>
+  
+
+
+  
+  <p class="outset"><a href="#F">I</a></p>
+  <li class="initial"><a href="#">INDIVIDUAL MAJOR</a></li>
+  <li class="initial"><a href="#">INDUSTRIAL ENGINEERING</a></li>
+  <li class="initial"><a href="#">INTEGRATED LIBERAL STUDIES</a></li>
+  <li class="initial"><a href="#">INTEGRATED STUDIES IN SCIENCE, ENGINEERING, AND SOCIETY</a></li>
+  <li class="initial"><a href="#">INTERIOR ARCHITECTURE</a></li>
+  <li class="initial"><a href="#">INTERNATIONAL BUSINESS</a></li>
+  <li class="initial"><a href="#">INTERNATIONAL ENGINEERING</a></li>
+  <li class="initial"><a href="#">INTERNATIONAL STUDIES</a></li>
+  <li class="initial"><a href="#">INTRODUCTORY STUDIES IN DANCE/MOVEMENT THERAPY</a></li>
+  <li class="initial"><a href="#">ITALIAN</a></li>
+  
+
+
+
+  
+  <p class="outset"><a href="#F">J</a></p>
+  <li class="initial"><a href="#">JAPANESE PROFESSIONAL COMMUNICATION</a></li>
+  <li class="initial"><a href="#">JAPANESE</a></li>
+  <li class="initial"><a href="#">JEWISH STUDIES</a></li>
+  <li class="initial"><a href="#">JOURNALISM</a></li>
+  
+
+
+  
+  <p class="outset"><a href="#F">K</a></p>
+  <li class="initial"><a href="#">KINESIOLOGY</a></li>
+  
+
+
+  
+  <p class="outset"><a href="#F">L</a></p>
+  <li class="initial"><a href="#">LGBTQ+ STUDIES</a></li>
+  <li class="initial"><a href="#">LANDSCAPE ARCHITECTURE</a></li>
+  <li class="initial"><a href="#">LANGUAGES AND CULTURES OF ASIA</a></li>
+  <li class="initial"><a href="#">LATIN AMERICAN, CARIBBEAN, AND IBERIAN STUDIES</a></li>
+  <li class="initial"><a href="#">LATIN</a></li>
+  <li class="initial"><a href="#">LEGAL STUDIES</a></li>
+  <li class="initial"><a href="#">LIFE SCIENCES COMMUNICATION</a></li>
+  <li class="initial"><a href="#">LINGUISTICS</a></li>
+  </ul>
+</div>
+
+<div id="M-R" class="container">
+  <h1>M - R</h1>
+ 
+  <ul class="list"> 
+ 
+  <p class="outset"><a href="#M">M</a></p>
+  <li class="initial"><a href="#">MANUFACTURING ENGINEERING</a></li>
+  <li class="initial"><a href="#">MATERIAL CULTURE STUDIES</a></li>
+  <li class="initial"><a href="#">MATERIALS SCIENCE AND ENGINEERING</a></li>
+  <li class="initial"><a href="#">MATHEMATICS</a></li>
+  <li class="initial"><a href="#">MECHANICAL ENGINEERING</a></li>
+  <li class="initial"><a href="#">MEDIEVAL STUDIES</a></li>
+  <li class="initial"><a href="#">MICROBIOLOGY</a></li>
+  <li class="initial"><a href="#">MIDDLE EAST STUDIES</a></li>
+  <li class="initial"><a href="#">MOLECULAR BIOLOGY</a></li>
+  <li class="initial"><a href="#">MUSIC</a></li>
+  
+
+
+  
+  <p class="outset"><a href="#N">N</a></p>
+  <li class="initial"><a href="#">NAVAL SCIENCES</a></li>
+  <li class="initial"><a href="#">NEUROBIOLOGY</a></li>
+  <li class="initial"><a href="#">NUCLEAR ENGINEERING</a></li>
+  <li class="initial"><a href="#">NURSING</a></li>
+  <li class="initial"><a href="#">NUTRITIONAL SCIENCES</a></li>
+  
+
+
+  
+  <p class="outset"><a href="#P">P</a></p>
+  <li class="initial"><a href="#">PERSONAL FINANCE</a></li>
+  <li class="initial"><a href="#">PHARMACEUTICAL SCIENCES</a></li>
+  <li class="initial"><a href="#">PHARMACOLOGY AND TOXICOLOGY</a></li>
+  <li class="initial"><a href="#">PHILOSOPHY</a></li>
+  <li class="initial"><a href="#">PHYSICAL EDUCATION</a></li>
+  <li class="initial"><a href="#">PHYSICS</a></li>
+  <li class="initial"><a href="#">PILATES</a></li>
+  <li class="initial"><a href="#">PLANT PATHOLOGY</a></li>
+  <li class="initial"><a href="#">POLISH</a></li>
+  <li class="initial"><a href="#">POLITICAL ECONOMY, PHILOSOPHY, POLITICS</a></li>
+  <li class="initial"><a href="#">POLITICAL SCIENCE</a></li>
+  <li class="initial"><a href="#">PORTUGESE</a></li>
+  <li class="initial"><a href="#">POULTRY SCIENCE</a></li>
+  <li class="initial"><a href="#">PSYCHOLOGY</a></li>
+  
+
+  
+  <p class="outset"><a href="#R">R</a></p>
+  <li class="initial"><a href="#">REHABILITATION PSYCOLOGY</a></li>
+  <li class="initial"><a href="#">RELIGIOUS STUDIES</a></li>
+  <li class="initial"><a href="#">RETAILING AND CONSUMER BEHAVIOR</a></li>
+  <li class="initial"><a href="#">RUSSIAN</a></li>
+  <li class="initial"><a href="#">RUSSIAN, EAST EUROPEAN, AND CENTRAL ASIAN STUDIES</a></li>
+  
+  </ul>
+</div>
+
+
+<div id="S-Z" class="container">  
+  <h1>S - Z</h1>
+  <ul class="list">
+  <p class="outset"><a href="#S">S</a></p>
+  <li class="initial"><a href="#">SCANDINAVIAN STUDIES</a></li>
+  <li class="initial"><a href="#">SOCIAL WELFARE</a></li>
+  <li class="initial"><a href="#">SOCIAL WORK</a></li>
+  <li class="initial"><a href="#">SOCIOLOGY</a></li>
+  <li class="initial"><a href="#">SOIL SCIENCE</a></li>
+  <li class="initial"><a href="#">SOUTH ASIAN STUDIES</a></li>
+  <li class="initial"><a href="#">SOUTHEAST ASIAN STUDIES</a></li>
+  <li class="initial"><a href="#">SPANISH STUDIES FOR BUSINESS STUDENTS</a></li>
+  <li class="initial"><a href="#">SPANISH</a></li>
+  <li class="initial"><a href="#">SPECIAL EDUCATION</a></li>
+  <li class="initial"><a href="#">STATISTICS</a></li>
+  <li class="initial"><a href="#">STUDIO ART</a></li>
+  <li class="initial"><a href="#">SUPPLY CHAIN MANAGEMENT</a></li>
+  <li class="initial"><a href="#">SUSTAINABILITY</a></li>
+  
+
+
+  
+  <p class="outset"><a href="#T">T</a></p>
+  <li class="initial"><a href="#">TEACHING ENGLISH TO SPEAKERS OF OTHER LANGUAGES</a></li>
+  <li class="initial"><a href="#">TECHNICAL COMMUNICATION</a></li>
+  <li class="initial"><a href="#">TECHNICAL JAPANESE STUDIES FOR UNDERGRADUATES</a></li>
+  <li class="initial"><a href="#">TEXTILES AND FASHION DESIGN</a></li>
+  <li class="initial"><a href="#">THEATRE AND DRAMA</a></li>
+  
+
+  
+  <p class="outset"><a href="#W">W</a></p>
+  <li class="initial"><a href="#">WILDLIFE ECOLOGY</a></li>
+  
+
+  
+  <p class="outset"><a href="#Z">Z</a></p>
+  <li class="initial"><a href="#">ZOOLOGY</a></li>
+
+  </ul>  
+</div>
+
+
+</body>
+
+</html>
