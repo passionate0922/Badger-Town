@@ -11,7 +11,6 @@ ul {
   font-family: Adobe Song Std L;
   text-shadow: 1px 0.3px black;
 }
-
 ul li {
   display: block;
   position: relative;
@@ -22,7 +21,6 @@ ul li {
   text-align: center;
   text-decoration: none;
 }
-
 li ul { 
   display: none;
   position: absolute;
@@ -31,7 +29,6 @@ li ul {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1; 
 }
-
 ul li a {
   display: block;
   padding: 14px 16px;
@@ -42,54 +39,41 @@ ul li a {
   color: white;	/*text-color of navbar*/
   font-size: 18px;
 }
-
-
 li:hover > ul {
   display: block;
   position: absolute;
 }
-
-
 li:hover li { 
   float: none; 	/*hoverdown menu를 일렬로*/
 }
-
 li:hover a { 
   background-color: #b30000;  
 }
-
 li:hover li a {
   background-color: #f9f9f9  /*hoverdown menu의 색*/
 }
-
 li:hover li a:hover { 
 /*hoverdown menu가 hover될 때의 색*/
   background: #ddd; 
 }
-
-
 /*이거 내가 새로 넣은 것*/
 li:hover > ul a { 
   color: red;	/*hoverdown menu text color*/
   text-shadow: 0px 0px;
 }
-
 .menucontainer li ul li { 
   border-top: 0; 
 }
-
 ul ul ul {
   left: 100%;
   top: 0;
 }
-
 /*이게 있으면 navbar 전체 다 빨간색, 없으면 버튼 있는 부분만 빨간색 - 추후 수정가능성*/
 ul:before,
 ul:after {
   content: " "; /* 1 */
   display: table; /* 2 */
 }
-
 /*이것도 위에 css랑 같은 작용...*/
 ul:after { clear: both; }
 </style>
@@ -98,7 +82,9 @@ ul:after { clear: both; }
 
 <body>
 
-<h2>BADGER TOWN DICTIONARY</h2>
+<h2>BADGER TOWN</h2> 
+<p align="right"><a href="register.html">Register</a><b>|</b><a href="Sign-in.html">Sign-in</a></p>
+
 
 <ul class="menucontainer">
   
